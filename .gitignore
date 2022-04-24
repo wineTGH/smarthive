@@ -1,4 +1,6 @@
 /venv
 __pycache__
+db_repository
 
 config.py
+app.db

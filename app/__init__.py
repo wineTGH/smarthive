@@ -4,5 +4,5 @@ app = Flask(__name__)
 
 from app import views
 
-from api import error_handlers
-from api import handlers
+from app.api import error_handlers
+from app.api import hive_handlers

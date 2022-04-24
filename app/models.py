@@ -14,9 +14,24 @@ class User(db.Model):
 
     hiveid = db.Column(db.String(16), index = True,
      unique = True)
-    
+
+
     def __repr__(self) -> str:
         return f'<User {self.username}>'
 
+
 class hive(db.Model):
-    ...
+    id = db.Column(db.Integer, primary_key = True)
+    
+    hiveid = db.Column(db.String(16), db.ForeignKey('user.hiveid'))
+
+    temp = db.Column(db.String(255))
+    hum = db.Column(db.String(255))
+    weight = db.Column(db.String(255))
+    energy = db.Column(db.String(255))
+    
+    timestamp = db.Column(db.DateTime)
+
+
+    def __repr__(self) -> str:
+        return f'Hive {self.hiveid}'

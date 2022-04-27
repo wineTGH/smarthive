@@ -1,5 +1,33 @@
-{extends "base.html"}
+{% extends "base.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signin.css') }}">
+{% endblock %}
 
 {% block content %}
-    login page
+<body class="text-center">
+<main class="form-signin">
+    <form actions="">
+      <img class="mb-4" src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Добро пожаловать, снова!</h1>
+  
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" style="padding-right: 42px;" placeholder="Почта">
+        <label for="floatingInput">Эл. Почта</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
+        <label for="floatingPassword">Пароль</label>
+      </div>
+  
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Запомнить меня
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Войти</button>
+      <p class="mt-5 mb-3 text-muted">© 2021–2022</p>
+    </form>
+  </main>
+</body>
 {% endblock %}

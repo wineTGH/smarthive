@@ -7,16 +7,16 @@
 {% block content %}
 <body class="text-center">
 <main class="form-signin">
-    <form actions="">
+    <form actions="/api/v1/users/login" method="get">
       <img class="mb-4" src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="72" height="57">
       <h1 class="h3 mb-3 fw-normal">Добро пожаловать, снова!</h1>
   
       <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" style="padding-right: 42px;" placeholder="Почта">
+        <input type="email" class="form-control" id="floatingInput" style="padding-right: 42px;" placeholder="Почта" name="email">
         <label for="floatingInput">Эл. Почта</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль" name="pass">
         <label for="floatingPassword">Пароль</label>
       </div>
   
